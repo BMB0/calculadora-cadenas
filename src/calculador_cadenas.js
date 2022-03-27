@@ -1,15 +1,19 @@
 function calculador(cadena) {
-  var i = 0, res = 0;
-  res = parseInt(cadena);
+  var res = 0;
+  
   if(cadena === "")
   {
     res = 0;
   }
-  if(cadena.search(",") != -1) 
+  else if(cadena.search(",") != -1) 
   {
     const cadenaArray = cadena.split(",");
-    res = parseInt(cadenaArray[0]) +  parseInt(cadenaArray[1]);
-  } 
+    for(var i = 0; i < cadenaArray.length ; i++)
+    {
+      res = res + parseInt(cadenaArray[i]);
+    }
+  } else res = parseInt(cadena);
+
   return res;
 }
 
