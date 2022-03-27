@@ -1,5 +1,9 @@
 function calculador(cadena) {
-  return 0;
+  if(cadena === "")
+  {
+    cadena = "0";
+  }
+  return parseInt(cadena);
 }
 
 export default calculador;
