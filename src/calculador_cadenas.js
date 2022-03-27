@@ -5,9 +5,9 @@ function calculador(cadena) {
   {
     res = 0;
   }
-  else if(cadena.search(",") != -1) 
+  else if(cadena.search(",") != -1 || cadena.search("-") != -1) 
   {
-    const cadenaArray = cadena.split(",");
+    const cadenaArray = cadena.split(/[,-]+/);
     for(var i = 0; i < cadenaArray.length ; i++)
     {
       res = res + parseInt(cadenaArray[i]);
