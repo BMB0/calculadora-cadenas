@@ -20,7 +20,7 @@ function getSeparator(cadena)
 {
   var cadenaArray;
   cadenaArray = cadena.split(/[[\n ]+/);
-  return splitAdd(cadenaArray[2], cadenaArray[1][0]);
+  return splitAdd(cadenaArray[2], cadenaArray[1].slice(0,-1));
 }
 
 function splitAdd(cadena, separador)
@@ -34,7 +34,7 @@ function splitAdd(cadena, separador)
 
   for(var i = 0; i < cadenaArray.length ; i++)
   {
-    if( parseInt(cadenaArray[i]) < 1000)
+    if( parseInt(cadenaArray[i]) <= 1000)
     res = res + parseInt(cadenaArray[i]);
   }
   return res;
