@@ -19,7 +19,10 @@ describe("Calcula Cadenas", () => {
   it("deberia retornar 3 al ingresar la cadena 1-1,1 ", () => {
     expect(calculador("1-1,1")).toEqual(3);
   });
-  it("deberia retornar 17 al ingresar la cadena //[;] 6;7;4 ", () => {
-    expect(calculador("//[;] 6;7;4")).toEqual(17);
+  it("deberia retornar 18 al ingresar la cadena //[;] 6;7;4;1 ", () => {
+    expect(calculador("//[;] 6;7;4;1")).toEqual(18);
+  });
+  it("deberia retornar 10 al ingresar la cadena //[;] 5;2;1500;3 ", () => {
+    expect(calculador("//[;] 5;2;1500;3")).toEqual(10);
   });
 });
