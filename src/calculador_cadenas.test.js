@@ -28,4 +28,7 @@ describe("Calcula Cadenas", () => {
   it("deberia retornar 10 al ingresar la cadena //[&%$] 5&%$2,1500-3 ", () => {
     expect(calculador("//[&%$] 5&%$2,1500-3")).toEqual(10);
   });
+  it("deberia retornar 10 al ingresar la cadena //[*][%] 1*2%3,7-9", () => {
+    expect(calculador("//[*][%] 1*2%3,7-9")).toEqual(22);
+  });
 });
